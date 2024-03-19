@@ -1,0 +1,29 @@
+pastakas = bool(int(input("Kas sul on olemas pastakas 1 = jah, 0 = ei? ")))
+
+värvipliiatsid = bool(int(input("Kas sul on olemas värvipliiatsid 1 = jah, 0 = ei? ")))
+
+paber = bool(int(input("Kas sul on olemas valge paber 1 = jah, 0 = ei? ")))
+
+kunstihuviline = bool(int(input("Kas sind huvitab visuaalne kunst 1 = jah, 0 = ei? ")))
+
+lugemine = bool(int(input("Kas sulle meeldib lugemine 1 = jah, 0 = ei? ")))
+
+kokandus = bool(int(input("Kas sind huvitab kokandus 1 = jah, 0 = ei? ")))
+
+if kokandus:
+    print("Sa võiksid hankida kokandusvahendid ja kokanduse omal käel läbi proovida!")
+else:
+    print("Ebaselge vastus.")
+
+    if värvipliiatsid and paber and kunstihuviline:
+        print("Sulle sobib kunst!")
+    elif pastakas and paber:
+        print("Sulle sobib kirjutamine!")
+    elif värvipliiatsid and kunstihuviline:
+        print("Sulle sobib kunst!")
+    elif paber and kunstihuviline:
+        print("Sulle sobib kunst!")
+    elif paber and pastakas and lugemine:
+        print("Sulle sobib kirjutamine!")
+    elif not kunstihuviline:
+        print("Sulle sobib kirjutamine!")
